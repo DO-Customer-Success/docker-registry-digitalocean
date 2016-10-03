@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+  $1 = 1
+fi
+
 echo -e "Generating credentials for $1 user(s)\n"
 
 function generate_CA {
