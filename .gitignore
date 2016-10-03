@@ -1,0 +1,8 @@
+do-key
+do-key.pub
+*.tfstate
+*.tfstate.backup
+*.tfvars
+ca.crt
+ca.key
+registry_auth
