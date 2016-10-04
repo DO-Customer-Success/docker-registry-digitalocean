@@ -1,5 +1,5 @@
 output "Connection Details" {
-  value = "Use the password in your registry_auth file as user `imgadm` to login to `https://${var.common_name}` (${digitalocean_droplet.registry.ipv4_address})\n"
+  value = "To log in to `https://${var.common_name}` (${digitalocean_droplet.registry.ipv4_address}), use the credentials set for your users in `registry_auth` in your project directory.\n"
 }
 
 output "Cert Requirements for Docker" {
