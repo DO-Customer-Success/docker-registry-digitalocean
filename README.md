@@ -14,6 +14,8 @@ If you prefer to provide/generate your own `htpasswd` and/or SSL certificates, t
 Importing Certificates, Users
 -----------------------------
 
+*This is optional: a default run will generate certs and randomly generated users, but the following will work for users with commercial SSLs, pre-existing users for basic auth, etc.*
+
 If you have an existing SSL certificate and key for your registry FQDN, you can place them in the `certs` directory, and they will be picked up by Terraform.
 
 If you wish to import Users from an existing htpasswd file, place that file in `auth/htpasswd`.
@@ -39,7 +41,7 @@ If you do not require the above customizations, simply proceed to run
 terraform apply
 ```
 
-You can pre-populate the variables in your `terraform.tfvars` file using this format:
+You can, however, pre-populate the following variables in your `terraform.tfvars` file using this format:
 
 ```
 do_token = "<Your DigitalOcean API Token"
@@ -55,10 +57,10 @@ pub_key = "./path-to-public-key"
 
 ssh_fingerprint = "<Fingerprint of SSH key used in your DO account"
 
-#Size of the Registry Data volume
+#Size of the Registry Data volume in GB
 vol_size = "10"
 
-#Number of user accounts to generate (if a user list is not imported)
+#Number of user accounts to generate (if a user list is not imported; this value is taken, but ignored if a list is provided)
 user_count = "3"
 ```
 
