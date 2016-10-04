@@ -3,6 +3,8 @@ do-key.pub
 *.tfstate
 *.tfstate.backup
 *.tfvars
-ca.crt
-ca.key
+certs/ca.*
 registry_auth
+registry_auth.old.*
+certs/registry.*
+auth/htpasswd
