@@ -1,4 +1,4 @@
-Deploy a Docker Registry on DigitalOcean with terraform
+Deploy a Docker Registry on DigitalOcean with Terraform
 =======================================================
 
 *Note:* This has not been tested for production use; it is recommended that you review any relevant security best practices before deploying this outside of a Development
@@ -7,9 +7,9 @@ environment.
 Requirements
 ------------
 
-The automation in the script requires `docker` and `openssl` to be installed on the client machine.
+The automation in the script requires `docker` and `openssl` (in addition to, of course, `terraform`) to be installed on the client machine.
 
-If you prefer to provide/generate your own `htpasswd` and/or SSL certificates, these are not required, and the scripts will not create them.
+If you prefer to provide/generate your own `htpasswd` and/or SSL certificates, these are not required, and will not impede the Terraform run.
 
 Importing Certificates, Users
 -----------------------------
